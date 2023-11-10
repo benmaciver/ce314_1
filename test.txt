@@ -1,0 +1,4 @@
+Write a regular expression that can find all amounts of money ina text.
+Your expression should be able to deal with different formats and
+currencies, for example £50,000 and £117.3m as well as 30p, 500m euro,
+338bn euros, $15bn and $92.88.  
