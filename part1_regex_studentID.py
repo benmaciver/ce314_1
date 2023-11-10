@@ -1,5 +1,5 @@
 import re
-pattern = r'(?:£|\$)?\d+(?:,|\.)?\d+(?:bn|m|p)?(?:md\s\beuro\b|\seuros)?'
+pattern = r'(?:\d+(?:,|\.)?\d+(?:bn|m)?(?:\seuros|\seuro|p))|(?:(?:£|\$)\d+(?:,|\.)?\d+(?:bn|m)?)'
 
 a = open("bbctxt.txt","r")
 bbcText = a.read()
@@ -9,4 +9,6 @@ testText = b.read()
 
 matches1 = re.findall(pattern, bbcText)
 print(matches1)
+matches2 = re.findall(pattern, testText)
+print(matches2)
 
