@@ -4,10 +4,14 @@ pattern = r'(?:\d+(?:,|\.)?\d+(?:bn|m)?(?:\seuros|\seuro|p))|(?:(?:£|\$)\d+(?:,
 
 a = open("bbctxt.txt","r")
 bbcText = a.read()
+b = open("test.txt","r")
+testText = b.read()
 
 
 
 matches = re.findall(pattern, bbcText)
+print(matches)
+matches = re.findall(pattern, testText)
 print(matches)
 
 
