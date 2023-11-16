@@ -1,4 +1,4 @@
-#requires user to call nltk.download() in the shell first and download book
+ #requires user to call nltk.download() in the shell first and download book
 
 import nltk
 from nltk.book import text7

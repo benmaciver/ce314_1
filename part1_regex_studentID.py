@@ -4,28 +4,21 @@ pattern = r'(?:\d+(?:,|\.)?\d+(?:bn|m)?(?:\seuros|\seuro|p))|(?:(?:£|\$)\d+(?:,
 
 a = open("bbctxt.txt","r")
 bbcText = a.read()#reads the bbc article
-b = open("test.txt","r")
-testText = b.read()#some test data from the assignment brief to test for more ways to type currency
-
 
 
 matches = re.findall(pattern, bbcText)
 print(matches)
-matches = re.findall(pattern, testText)
-print(matches)
-#prints every time this re is matched in both texts
+
+#prints every time this re is matched
 
 
 #ex2
 #re for phone numbers
 pattern = r'(?:(?:(?:(?:(?:\+1)|2|3)-))?(?:\(\d{3}\))?(?:\s|\-))?(?:\d(?:\.|-|\s)?)+'
 
-c = open("phone_numbers.txt","r")#phone numbers from assignment brief
-phonebook = c.read()
+phone_numbers = ["555.123.4565","+1-(800)-545-2468","2-(800)-545-2468","3-800-545-2468","555-123-3456","555 222 3342","(234) 234 2442","(243)-234-2342","1234567890","123.456.7890","123.4567","123-4567","1234567900","12345678900"]
 
-matches = re.findall(pattern, phonebook)
+
+matches = [re.findall(pattern, number) for number in phone_numbers]
 for match in matches:
-    print(match)
-    #prints each match in a list
-
-    #matches every phone number correctly except 2nd and 3rd
+    print (match)
